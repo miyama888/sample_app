@@ -6,4 +6,10 @@ Rails.application.routes.draw do
   get 'top' => 'homes#top'
   
   post 'todolists' => 'todolists#create'
+
+  get 'todolists' => 'todolists#index'
+
+  get 'todolists/:id' => 'todolists#show',as:'todolist'
+  # .../todolists/1や .../todolists/3 に該当する
+  
 end
